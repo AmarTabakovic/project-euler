@@ -2,8 +2,8 @@ max_result = 0
 
 for a in range(1, 100):
     for b in range(1, 100):
-        product = a ** b
-        str_num = str(product)
+        a_pow_b = a ** b
+        str_num = str(a_pow_b)
         
         result = 0
 
