@@ -6,6 +6,7 @@ def factorial(n):
 
 max_val = 1000000
 i = 3 
+result = 0
 while i < max_val:
     val_str = str(i)
     sum_fac = 0
@@ -13,6 +14,8 @@ while i < max_val:
         sum_fac += factorial(ord(c) - 48)
    
     if sum_fac == i:
-        print(i)
+        result += i
 
     i += 1
+
+print(result)
