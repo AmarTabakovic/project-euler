@@ -7,19 +7,21 @@ def pentagonal(n):
 def hexagonal(n):
     return math.floor(n * (2 * n - 1))
 
-i = 0
-counter = 0
-solution = 0
-while counter < 2:
-    j = math.floor(i * 0.8) # Pure guesswork
-    can_continue = False
-    x = pentagonal(i)
-    while j < i and not can_continue:
-        if x == hexagonal(j):
-            solution = x
-            counter += 1
-            can_continue = True
-        j += 1
-    i += 1
+pen_set = set()
+hex_set = set()
+
+for i in range(143, 1000000):
+    hex_set.add(hexagonal(i))
+
+for i in range(165, 1000000):
+    pen_set.add(pentagonal(i))
+
+intersect = hex_set.intersection(pen_set)
+sol_list = list()
+
+for i in intersect:
+    sol_list.append(i)
+
+solution = sol_list[1]
 
 print(solution)
