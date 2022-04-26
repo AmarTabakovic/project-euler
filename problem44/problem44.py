@@ -2,7 +2,7 @@ def pentagonal(n):
     return n * ((3 * n) - 1) / 2
 
 s = set()
-for i in range(1, 10000):
+for i in range(1, 5000):
     s.add(pentagonal(i))
 
 min_v = 9999999999999
