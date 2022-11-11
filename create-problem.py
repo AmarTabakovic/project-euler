@@ -2,7 +2,7 @@ import os
 import sys
 
 MAKEFILE_CONTENT = 'all:\n\tg++ -std=c++14 main.cpp -o main -Ofast\n'
-MAIN_CONTENT = '#include <iostream>\n\nint main() {\n\treturn 0;\n}\n'
+MAIN_CONTENT = '#include <iostream>\n\nint main() {\n  return 0;\n}\n'
 GITIGNORE_CONTENT = 'main\n'
 
 if len(sys.argv) != 2:
