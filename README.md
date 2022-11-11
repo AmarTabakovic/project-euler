@@ -4,6 +4,6 @@ I call this the
 
 <p align="center">
     <i>
-        🎶🎷🎶brute-force blues🎶🎷🎶...
+        🎶🎷🎶brute-force blues...🎶🎷🎶
     </i>
 </p>
