@@ -1,8 +1,9 @@
 import argparse
 import os
 
-MAKEFILE_CONTENT = 'all:\n\tg++ main.cpp -o main'
-MAIN_CONTENT = '#include <iostream>\n\nint main() {\n\treturn 0;\n}'
+MAKEFILE_CONTENT = 'all:\n\tg++ main.cpp -o main -Ofast\n'
+MAIN_CONTENT = '#include <iostream>\n\nint main() {\n\treturn 0;\n}\n'
+GITIGNORE_CONTENT = 'main\n'
 
 parser = argparse.ArgumentParser()
 
@@ -33,6 +34,10 @@ with open(f'{problem_dir}/main.cpp', 'w') as file:
 # Create Makefile
 with open(f'{problem_dir}/Makefile', 'w') as file:
     file.write(MAKEFILE_CONTENT)
+
+# Create .gitignore
+with open(f'{problem_dir}/.gitignore', 'w') as file:
+    file.write(GITIGNORE_CONTENT)
 
 print(f'Successfully created problem {args.problem_nr}')
  
