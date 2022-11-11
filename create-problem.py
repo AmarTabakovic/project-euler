@@ -1,24 +1,28 @@
-import argparse
 import os
+import sys
 
 MAKEFILE_CONTENT = 'all:\n\tg++ -std=c++14 main.cpp -o main -Ofast\n'
 MAIN_CONTENT = '#include <iostream>\n\nint main() {\n\treturn 0;\n}\n'
 GITIGNORE_CONTENT = 'main\n'
 
-parser = argparse.ArgumentParser()
+if len(sys.argv) != 2:
+    print('Please enter the problem number.')
+    exit(1)
 
-parser.add_argument('problem_nr',
-                        help='Problem number.',
-                        type=int)
+problem_nr = None
 
-args = parser.parse_args()
+try:
+    problem_nr = int(sys.argv[1])
+except ValueError:
+    print('Not a number.')
+    exit(1)
 
 # Problem number exceeds 4 digits
-if (args.problem_nr > 9999):
+if (problem_nr > 9999):
     print('Problem number is too big.')
     exit(1)
 
-problem_dir = f'problem-{args.problem_nr:04d}'
+problem_dir = f'problem-{problem_nr:04d}'
 
 # Create the problem directory
 try:
@@ -39,5 +43,5 @@ with open(f'{problem_dir}/Makefile', 'w') as file:
 with open(f'{problem_dir}/.gitignore', 'w') as file:
     file.write(GITIGNORE_CONTENT)
 
-print(f'Successfully created problem {args.problem_nr}')
+print(f'Successfully created problem {problem_nr}')
  
