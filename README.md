@@ -3,5 +3,7 @@
 I call this the 
 
 <p align="center">
-*🎶🎷🎶brute-force blues🎶🎷🎶...*
+    <i>
+        🎶🎷🎶brute-force blues🎶🎷🎶...
+    </i>
 </p>
