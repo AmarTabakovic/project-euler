@@ -18,10 +18,10 @@ int steps_of_collatz(unsigned long val, bool (&visited)[MAX]) {
 }
 
 int main() {
-  /** 
+  /**
    * Minor performance boost by avoiding numbers that were already
    * visited previously as an intermediate step.
-   * */
+   */
   bool visited[MAX];
   for (int i = 1; i <= MAX; i++) {
     visited[i] = false;
