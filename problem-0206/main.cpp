@@ -7,7 +7,6 @@ bool check(unsigned long long num) {
   for (int i = 1; i < 10; i++)
     if (num_str[(i - 1) * 2] != '0' + i) return false;
 
-  if (num_str[18] != '0') return false;
   return true;
 }
 
