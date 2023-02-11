@@ -4,23 +4,6 @@
 #include <string>
 #include <vector>
 
-/**
- * General ideas
- * - Iterate through cubes
- * - Order string representation of cube numerically (12...89)
- * - Hashmap of ordered string cubes
- * - Look for same until 5 found
- */
-
-struct entry {
-  std::string cube;
-  std::vector<int> nums;
-};
-
-bool compare(std::pair<std::string, int> p1, std::pair<std::string, int> p2) {
-  return p1.second < p2.second;
-}
-
 int main() {
   std::map<std::string, std::vector<int>> map;
 
