@@ -11,7 +11,7 @@ int main() {
   std::string curr_key;
 
   while (n < 5) {
-    unsigned long long num = i * i * i;
+    auto num = i * i * i;
     std::string str = std::to_string(num);
     std::sort(str.begin(), str.end());
     map[str].push_back(i);
